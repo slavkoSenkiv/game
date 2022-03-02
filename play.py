@@ -1,12 +1,11 @@
-import classes as c
+import classes
 
-pA = c.Character('A')
-pB = c.Character('B')
+pA = classes.Character('A')
+pB = classes.Character('B')
 
-print(pA.name, pA.hp_current)
-print(pB.name, pB.hp_current)
-for x in range(12):
-    pA.attack(pB)
-    print(pB.name, pB.hp_current)
-print(pA.name, pA.hp_current)
+for turn in range(1, 100):
+    pA.attack(pB, turn)
+    pB.attack(pA, turn)
+
+
 
